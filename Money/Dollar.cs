@@ -12,12 +12,12 @@ namespace Money
         }
         public Dollar(int amount)
         {
-
+            this.amount = amount;
         }
 
         public void Times(int mutiplier)
         {
-            amount = 5 * 2;
+            amount *= mutiplier;
         }
 
 
