@@ -8,15 +8,16 @@ namespace Money
 
         static void Main()
         {
-
+            
         }
         public Dollar(int amount)
         {
-
+            this.amount = amount;
         }
 
         public void Times(int mutiplier)
         {
+            amount *= mutiplier;
         }
 
 
