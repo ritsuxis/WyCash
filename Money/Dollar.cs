@@ -4,7 +4,7 @@ namespace Money
 {
     public class Dollar
     {
-        public int amount = 10;
+        public int amount;
 
         static void Main()
         {
@@ -17,6 +17,7 @@ namespace Money
 
         public void Times(int mutiplier)
         {
+            amount = 5 * 2;
         }
 
 
