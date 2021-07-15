@@ -17,8 +17,7 @@ namespace Money
 
         public Dollar Times(int mutiplier)
         {
-            amount *= mutiplier;
-            return null;
+            return new Dollar(amount * mutiplier);
         }
 
 
