@@ -15,9 +15,9 @@ namespace Money
             this.amount = amount;
         }
 
-        public void Times(int mutiplier)
+        public Dollar Times(int mutiplier)
         {
-            amount *= mutiplier;
+            return new Dollar(amount * mutiplier);
         }
 
 
