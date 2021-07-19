@@ -15,5 +15,12 @@ namespace MoneyTest
             product = five.Times(3);
             Assert.AreEqual(15, product.amount);
         }
+
+        [TestMethod]
+        public void TestEquality()
+        {
+            Assert.IsTrue(new Dollar(5).EqualAmount(new Dollar(5)));
+            Assert.IsFalse(new Dollar(5).EqualAmount(new Dollar(6)));
+        }
     }
 }
