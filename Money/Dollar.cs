@@ -4,7 +4,7 @@ namespace Money
 {
     public class Dollar
     {
-        public int amount;
+        private int amount;
 
         static void Main()
         {
@@ -24,6 +24,19 @@ namespace Money
         {
             Dollar dollar = (Dollar) obj;
             return amount == dollar.amount;
+        }
+
+        public override bool Equals(Object obj)
+        {
+            // Perform an equality check on two rectangles (Point object pairs).
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            Dollar dollar = (Dollar)obj;
+            return amount.Equals(dollar.amount);
+        }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
