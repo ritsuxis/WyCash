@@ -4,7 +4,14 @@ using System.Text;
 
 namespace Money
 {
-    class Money
+    public class Money
     {
+        protected int amount;
+        static void Main()
+        {
+
+        }
+
+        
     }
 }

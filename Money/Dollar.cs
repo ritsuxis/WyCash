@@ -2,14 +2,10 @@
 
 namespace Money
 {
-    public class Dollar
+    public class Dollar : Money
     {
-        private int amount;
+        
 
-        static void Main()
-        {
-            
-        }
         public Dollar(int amount)
         {
             this.amount = amount;
