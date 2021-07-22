@@ -19,6 +19,8 @@ namespace MoneyTest
         {
             Assert.IsTrue(new Dollar(5).EqualAmount(new Dollar(5)));
             Assert.IsFalse(new Dollar(5).EqualAmount(new Dollar(6)));
+            Assert.IsTrue(new Franc(5).EqualAmount(new Franc(5)));
+            Assert.IsFalse(new Franc(5).EqualAmount(new Franc(6)));
         }
 
         [TestMethod]

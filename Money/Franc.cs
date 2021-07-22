@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Money
 {
-    public class Franc
+    public class Franc : Money
     {
-        private int amount;
 
         public Franc(int amount)
         {
@@ -18,19 +17,13 @@ namespace Money
             return new Franc(amount * mutiplier);
         }
 
-        public bool EqualAmount(Object obj)
-        {
-            Franc dollar = (Franc)obj;
-            return amount == dollar.amount;
-        }
-
         public override bool Equals(Object obj)
         {
             // Perform an equality check on two rectangles (Point object pairs).
             if (obj == null || GetType() != obj.GetType())
                 return false;
-            Franc dollar = (Franc)obj;
-            return amount.Equals(dollar.amount);
+            Franc franc = (Franc)obj;
+            return amount.Equals(franc.amount);
         }
         public override int GetHashCode()
         {
