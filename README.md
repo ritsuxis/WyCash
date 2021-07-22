@@ -30,3 +30,7 @@ Assert.AreEqual(10, product.amounts)
 Assert.AreEqual(new Dollar(10), five.Times(2))
 ```
 Equalメソッドをオーバーライドして`Assert.IsTrue`で見てやる必要がある
+
+## 継承とアクセスレベル
+継承する際にアクセスレベルを考慮する必要がある
+詳細は[継承](https://docs.microsoft.com/ja-jp/dotnet/csharp/fundamentals/object-oriented/inheritance)と[アクセシビリティ レベル](https://docs.microsoft.com/ja-jp/dotnet/csharp/language-reference/keywords/accessibility-levels)を参照
