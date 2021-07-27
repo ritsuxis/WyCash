@@ -15,7 +15,7 @@ namespace Money
         public bool EqualAmount(Object obj)
         {
             Money money = (Money)obj;
-            return amount == money.amount;
+            return amount == money.amount && GetType().Equals(money.GetType());
         }
 
 
