@@ -9,7 +9,7 @@ namespace MoneyTest
         [TestMethod]
         public void TestMultiplication()
         {
-            Dollar five = new Dollar(5);
+            Money.Money five = Money.Money.MakeDollar(5);
             Assert.IsTrue(new Dollar(10).Equals(five.Times(2)));
             Assert.IsTrue(new Dollar(15).Equals(five.Times(3)));
         }
