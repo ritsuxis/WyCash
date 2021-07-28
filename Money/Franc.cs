@@ -12,7 +12,7 @@ namespace Money
             this.amount = amount;
         }
 
-        public Franc Times(int mutiplier)
+        public Money Times(int mutiplier)
         {
             return new Franc(amount * mutiplier);
         }
