@@ -5,15 +5,15 @@ namespace Money
     public class Dollar : Money
     {
 
-        public Dollar(int amount)
+        public Dollar(int amount, String currency)
         {
             this.amount = amount;
-            this.currency = "USD";
+            this.currency = currency;
         }
 
         public override Money Times(int mutiplier)
         {
-            return new Dollar(amount * mutiplier);
+            return Money.MakeDollar(amount * mutiplier);
         }
 
         public override bool Equals(Object obj)
