@@ -4,18 +4,17 @@ namespace Money
 {
     public class Dollar : Money
     {
-        
 
         public Dollar(int amount)
         {
             this.amount = amount;
+            this.currency = "USD";
         }
 
         public override Money Times(int mutiplier)
         {
             return new Dollar(amount * mutiplier);
         }
-
 
         public override bool Equals(Object obj)
         {

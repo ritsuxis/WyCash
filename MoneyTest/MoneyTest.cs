@@ -31,5 +31,12 @@ namespace MoneyTest
             Assert.IsTrue(Money.Money.MakeFranc(10).Equals(five.Times(2)));
             Assert.IsTrue(Money.Money.MakeFranc(15).Equals(five.Times(3)));
         }
+
+        [TestMethod]
+        public void TestCurrency()
+        {
+           Assert.AreEqual("USD", Money.Money.MakeDollar(1).Currency());
+           Assert.AreEqual("CHF", Money.Money.MakeFranc(1).Currency());
+        }
     }
 }

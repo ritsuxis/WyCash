@@ -7,10 +7,16 @@ namespace Money
     abstract public class Money
     {
         protected int amount;
+        protected String currency;
         abstract public Money Times(int multiplier);
         static void Main()
         {
 
+        }
+
+        public String Currency()
+        {
+            return currency;
         }
 
         public bool EqualAmount(Object obj)
