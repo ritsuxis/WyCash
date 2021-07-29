@@ -32,7 +32,7 @@ namespace Money
 
         public static Money MakeFranc(int amount)
         {
-            return new Franc(amount);
+            return new Franc(amount, "CHF");
         }
 
     }
