@@ -7,10 +7,22 @@ namespace Money
     abstract public class Money
     {
         protected int amount;
+        protected String currency;
         abstract public Money Times(int multiplier);
         static void Main()
         {
 
+        }
+
+        public Money(int amount, String currency)
+        {
+            this.amount = amount;
+            this.currency = currency;
+        }
+
+        public String Currency()
+        {
+            return currency;
         }
 
         public bool EqualAmount(Object obj)
@@ -21,12 +33,12 @@ namespace Money
 
         public static Money MakeDollar(int amount)
         {
-            return new Dollar(amount);
+            return new Dollar(amount, "USD");
         }
 
         public static Money MakeFranc(int amount)
         {
-            return new Franc(amount);
+            return new Franc(amount, "CHF");
         }
 
     }

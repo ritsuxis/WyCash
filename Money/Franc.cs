@@ -7,14 +7,14 @@ namespace Money
     public class Franc : Money
     {
 
-        public Franc(int amount)
+        public Franc(int amount, String currency) : base(amount, currency)
         {
-            this.amount = amount;
+
         }
 
         public override Money Times(int mutiplier)
         {
-            return new Franc(amount * mutiplier);
+            return Money.MakeFranc(amount * mutiplier);
         }
 
         public override bool Equals(Object obj)
