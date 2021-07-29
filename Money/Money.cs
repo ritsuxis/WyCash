@@ -14,6 +14,12 @@ namespace Money
 
         }
 
+        public Money(int amount, String currency)
+        {
+            this.amount = amount;
+            this.currency = currency;
+        }
+
         public String Currency()
         {
             return currency;

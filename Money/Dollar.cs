@@ -5,10 +5,9 @@ namespace Money
     public class Dollar : Money
     {
 
-        public Dollar(int amount, String currency)
+        public Dollar(int amount, String currency) : base(amount, currency)
         {
-            this.amount = amount;
-            this.currency = currency;
+
         }
 
         public override Money Times(int mutiplier)
