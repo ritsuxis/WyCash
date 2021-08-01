@@ -4,11 +4,13 @@ using System.Text;
 
 namespace Money
 {
-    abstract public class Money
+    public class Money
     {
         protected int amount;
         protected String currency;
-        abstract public Money Times(int multiplier);
+        public Money Times(int multiplier) {
+            return null;
+        }
         static void Main()
         {
 
@@ -25,10 +27,9 @@ namespace Money
             return currency;
         }
 
-        public bool EqualAmount(Object obj)
+        public override String ToString()
         {
-            Money money = (Money)obj;
-            return amount == money.amount && GetType().Equals(money.GetType());
+            return amount + " " + currency;
         }
 
         public static Money MakeDollar(int amount)
@@ -41,5 +42,15 @@ namespace Money
             return new Franc(amount, "CHF");
         }
 
+        public override bool Equals(Object obj)
+        {
+            Money money = (Money)obj;
+            return amount == money.amount && Currency().Equals(money.Currency());
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }
