@@ -9,7 +9,7 @@ namespace Money
         protected int amount;
         protected String currency;
         public Money Times(int multiplier) {
-            return null;
+            return new Money(amount * multiplier, currency);
         }
         static void Main()
         {

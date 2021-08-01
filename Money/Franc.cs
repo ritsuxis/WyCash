@@ -11,10 +11,5 @@ namespace Money
         {
 
         }
-
-        public Money Times(int mutiplier)
-        {
-            return new Money(amount * mutiplier, currency);
-        }
     }
 }
