@@ -12,7 +12,7 @@ namespace Money
 
         public override Money Times(int mutiplier)
         {
-            return Money.MakeDollar(amount * mutiplier);
+            return new Dollar(amount * mutiplier, "USD");
         }
 
         public override bool Equals(Object obj)
