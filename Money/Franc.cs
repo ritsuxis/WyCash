@@ -14,7 +14,7 @@ namespace Money
 
         public override Money Times(int mutiplier)
         {
-            return new Franc(amount * mutiplier, "CHF");
+            return new Franc(amount * mutiplier, currency);
         }
 
         public override bool Equals(Object obj)
